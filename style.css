@@ -196,27 +196,30 @@ body {
 }
 
 @media screen and (max-width:550px) {
-    .herosection{
+    .herosection {
         display: flex;
         flex-direction: column;
         padding: 2rem;
         gap: 4rem;
     }
-    .hero_image{
+
+    .hero_image {
         justify-content: center;
     }
-    .hero_image img{
+
+    .hero_image img {
         width: 100%;
     }
 }
 
-.my_tech_stack_section{
+.my_tech_stack_section {
     padding: 6rem 8rem 2rem;
     display: flex;
     flex-direction: column;
     font-family: var(--body-font-family);
 }
-.mts_heading{
+
+.mts_heading {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -226,38 +229,73 @@ body {
     word-spacing: var(--word-spacing);
     margin-bottom: 6rem;
 }
-.mts_heading h1{
+
+.mts_heading h1 {
     color: var(--solid-heading-dark-content);
     font-weight: 700;
 }
-.mts_heading h3{
+
+.mts_heading h3 {
     color: var(--light-content);
-    font-weight:400;
+    font-weight: 400;
 }
-.mts_flex{
+
+.mts_flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 4rem;
 }
-.mts_flex img{
+
+.mts_flex img {
     width: 6rem;
     height: 6rem;
     transition: transform 0.5s ease;
 }
-.mts_flex img:hover{
+
+.mts_flex img:hover {
     transform: scale(1.2);
 }
 
 @media screen and (max-width:550px) {
-    .my_tech_stack_section{
+    .my_tech_stack_section {
         padding: 2rem;
     }
-    .mts_heading h1{
+
+    .mts_heading h1 {
         font-size: 3rem;
     }
-    .mts_heading h3{
+
+    .mts_heading h3 {
         font-size: 14px;
     }
-} 
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
