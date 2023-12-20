@@ -19,6 +19,8 @@
     --button-success: #D7FFE0;
     --nav-font-family: 'Poppins';
     --body-font-family: 'DM Sans';
+    --letter-spacing: 2px;
+    --word-spacing: 2px
 }
 
 body {
@@ -168,8 +170,8 @@ body {
     cursor: default;
     font-size: 3rem;
     font-weight: 700;
-    word-spacing: 2px;
-    letter-spacing: 2px;
+    word-spacing: var(--word-spacing);
+    letter-spacing: var(--letter-spacing);
 }
 
 .hero_heading_name {
@@ -207,3 +209,55 @@ body {
         width: 100%;
     }
 }
+
+.my_tech_stack_section{
+    padding: 6rem 8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--body-font-family);
+}
+.mts_heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    letter-spacing: 1px;
+    word-spacing: var(--word-spacing);
+    margin-bottom: 6rem;
+}
+.mts_heading h1{
+    color: var(--solid-heading-dark-content);
+    font-weight: 700;
+}
+.mts_heading h3{
+    color: var(--light-content);
+    font-weight:400;
+}
+.mts_flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+.mts_flex img{
+    width: 6rem;
+    height: 6rem;
+    transition: transform 0.5s ease;
+}
+.mts_flex img:hover{
+    transform: scale(1.2);
+}
+
+@media screen and (max-width:550px) {
+    .my_tech_stack_section{
+        padding: 2rem;
+    }
+    .mts_heading h1{
+        font-size: 3rem;
+    }
+    .mts_heading h3{
+        font-size: 14px;
+    }
+} 
