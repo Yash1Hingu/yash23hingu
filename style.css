@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,7 +25,68 @@ body {
     background-color: var(--dark-mode);
 }
 
-.topnav{
-    font-family: var(--nav-font-family);
+.topnav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--nav-font-family);
+    padding: 2rem 8rem;
+}
+
+.topnav img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.navbar_flex {
+    display: flex;
+    align-items: center;
+}
+
+.topnav_links {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding-right: 4rem;
+}
+
+.topnav_links a {
+    text-decoration: none;
+    color: var(--light-content);
+    transition: all 0.5s ease;
+}
+@keyframes texthover {
+    0%{
+        background-size: 0%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}
+.topnav_links a:hover {
+    transform: scale(1.1);
+    background-color: var(--dark-mode);
+    background-image: var(--gradient-heading);
+    animation: texthover .5s ease;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.topnav_socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.topnav_socialmedia img {
+    width: 2rem;
+    height: 2rem;
+    transition: transform .5s ease;
+}
+
+.topnav_socialmedia img:hover {
+    transform: scale(1.2);
+    fill: #018C0F;
 }
