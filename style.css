@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-mode: #191919;
+    --solid-heading: #42446E;
+    --gradient-heading: linear-gradient(90deg, #05B3FF 0%, #F40058 50%);
+    --dark-content: #666666;
+    --solid-heading-dark-content: #CCCCCC;
+    --light-content: #A7A7A7;
+    --button-text: #018C0F;
+    --button-success: #D7FFE0;
+    --nav-font-family: 'Poppins';
+    --body-font-family: 'DM Sans';
+}
+
+body {
+    background-color: var(--dark-mode);
+}
+
+.topnav{
+    font-family: var(--nav-font-family);
+    display: flex;
+}
