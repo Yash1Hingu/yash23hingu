@@ -90,3 +90,51 @@ body {
     transform: scale(1.2);
     fill: #018C0F;
 }
+
+.responsive{
+    display: none;
+}
+
+@media screen and (max-width:400px){
+    .topnav{
+        padding: 1rem 2rem;
+    }
+    .navbar_flex{
+        z-index: 2;
+        height: 100%;
+        width: 0;
+        overflow: hidden;
+        transition: all .5s ease;
+    }
+    .responsive{
+        display: inline-block;
+    }
+    .responsive img{
+        width: 3rem;
+        height: 3rem;
+    }
+    .cross{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+    .navbar_flex{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: var(--dark-mode);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .topnav_links{
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    .topnav_links a{
+        padding: 1rem 0;
+    }
+}

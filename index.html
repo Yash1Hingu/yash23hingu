@@ -15,6 +15,9 @@
             <img src="/images/logo-yash.svg" alt="23yash">
         </div>
         <div class="navbar_flex">
+            <div class="responsive cross" onclick="closeNav()">
+                <img src="/images/icon-x.svg" alt="">
+            </div>
             <div class="topnav_links">
                 <a href="#">Home</a>
                 <a href="#">About</a>
@@ -34,7 +37,21 @@
                 </a>
             </div>
         </div>
+        <div class="responsive" onclick="openNav()">
+            <img src="/images/icon-menu.svg" alt="">
+        </div>
     </div>
+
+    <script>
+        function openNav() {
+            document.querySelector(".navbar_flex").style.width = "100%";
+            document.querySelector(".navbar_flex").style.height = "100%";
+        }
+        function closeNav() {
+            document.querySelector(".navbar_flex").style.width = "0";
+            document.querySelector(".navbar_flex").style.height = "100%";
+        }
+    </script>
 </body>
 
 </html>
