@@ -17,10 +17,12 @@
     --light-content: #A7A7A7;
     --button-text: #018C0F;
     --button-success: #D7FFE0;
+    --card-background: #363636;
     --nav-font-family: 'Poppins';
     --body-font-family: 'DM Sans';
     --letter-spacing: 2px;
-    --word-spacing: 2px
+    --word-spacing: 2px;
+    --container-padding: 6rem 8rem 2rem;
 }
 
 body {
@@ -213,7 +215,7 @@ body {
 }
 
 .my_tech_stack_section {
-    padding: 6rem 8rem 2rem;
+    padding: var(--container-padding);
     display: flex;
     flex-direction: column;
     font-family: var(--body-font-family);
@@ -282,6 +284,8 @@ body {
 
 /* Tooltip text */
 .tooltip .tooltiptext {
+    bottom: 0;
+    right: 0;
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -300,8 +304,100 @@ body {
     visibility: visible;
 }
 
+.projects_container {
+    margin-top: 2rem;
+    padding: var(--container-padding);
+    font-family: var(--body-font-family);
+    color: var(--solid-heading-dark-content);
+}
+.project_heading{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: var(--letter-spacing);
+    word-spacing: var(--word-spacing);
+    margin-bottom: 6rem;
+}
+.project_heading h3{
+    font-weight: 400;
+}
+.projects_flex_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+.project_card{
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    background-color: var(--card-background);
+    border-radius: 1.2rem;
+    transition: transform .5s ease;
+    box-shadow: 2px 2px 100px hsl(0 0% 0% / 20);
+}
+.project_card:hover{
+    transform: scale(1.05);
+}
+.project_image img{
+    width: 100%;
+}
+.project_about{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 1.5rem;
+    color: var(--solid-heading-dark-content);
+}
+.project_techstack{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+.project_techstack b{
+    font-size: 12px;
+}
+.project_about h4{
+    font-size: 18px;
+}
+.project_about p{
+    font-weight: lighter;
+    font-size: 12px;
+    text-align: left;
+    line-height: 1.5;
+}
+.project_links{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+.project_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.project_links img{
+    width: 16px;
+    height: 16px;
+}
+.project_links a{
+    color: #FFFFFF;
+    font-size: 12px;
+}
+.project_links a:hover{
+    color: var(--button-text);
+}
+
 @media screen and (max-width:550px) {
-    .tooltip{
-        display: none;
+    .projects_container{
+        padding: 9px;
+    }
+    .project_card{
+        width: 20rem;
     }
 }
