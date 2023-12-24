@@ -27,9 +27,12 @@
 
 body {
     background-color: var(--dark-mode);
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .topnav {
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
