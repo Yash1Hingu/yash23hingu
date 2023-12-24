@@ -197,8 +197,18 @@ body {
     align-items: center;
 }
 
+@keyframes shadowfade {
+    0%{
+        box-shadow: 1px 1px 0 var(--solid-heading);
+    }
+    100%{
+        box-shadow: 1px 1px 100px var(--solid-heading);
+    }
+}
 .hero_image img {
+    border-radius: 50%;
     width: 55%;
+    animation: shadowfade 1s alternate-reverse infinite;
 }
 
 @media screen and (max-width:550px) {
