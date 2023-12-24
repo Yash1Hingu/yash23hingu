@@ -29,6 +29,7 @@ body {
     background-color: var(--dark-mode);
     max-width: 1400px;
     margin: 0 auto;
+    scroll-behavior: smooth;
 }
 
 .topnav {
@@ -215,6 +216,69 @@ body {
     .hero_image img {
         width: 100%;
     }
+}
+
+.about_container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--container-padding);
+    font-family: var(--body-font-family);
+}
+.about_me{
+    margin-bottom: 4rem;
+}
+.about_me h1{
+    text-align: center;
+    color: var(--solid-heading-dark-content);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.about_me p{
+    color: var(--light-content);
+    text-align: center;
+}
+.education_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.education_container h1{
+    color: var(--solid-heading-dark-content);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.education_info{
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    padding:2rem 0;
+    border-bottom: 4px solid var(--card-background);
+    gap: 16px;
+}
+.education_info .edu_one ,.edu_two{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--light-content);
+}
+.edu_one p{
+    background-color: var(--button-success);
+    font-size: 14px;
+    opacity: 0.5;
+    padding: 6px 12px;
+    color: var(--button-text);
+    font-weight: 600;
+    border-radius: 24px;
+
+}
+.edu_two{
+    opacity: 0.5;
+    font-size: 1.2rem;
+}
+.edu_two h6{
+    display: flex;
+    align-items: center;
 }
 
 .my_tech_stack_section {
