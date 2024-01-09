@@ -22,7 +22,7 @@
     --body-font-family: 'DM Sans';
     --letter-spacing: 2px;
     --word-spacing: 2px;
-    --container-padding: 6rem 8rem 2rem;
+    --container-padding: 50px;
 }
 
 body {
@@ -174,7 +174,7 @@ body {
 
 .hero_heading h1 {
     cursor: default;
-    font-size: 3rem;
+    font-size: 42px;
     font-weight: 700;
     word-spacing: var(--word-spacing);
     letter-spacing: var(--letter-spacing);
@@ -233,7 +233,8 @@ body {
 .about_container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     padding: var(--container-padding);
     font-family: var(--body-font-family);
 }
@@ -325,6 +326,7 @@ body {
 .mts_heading h1 {
     color: var(--solid-heading-dark-content);
     font-weight: 700;
+
 }
 
 .mts_heading h3 {
@@ -341,8 +343,8 @@ body {
 }
 
 .mts_flex img {
-    width: 6rem;
-    height: 6rem;
+    width: 96px;
+    height: 96px;
     transition: transform 0.5s ease;
 }
 
@@ -353,10 +355,6 @@ body {
 @media screen and (max-width:550px) {
     .my_tech_stack_section {
         padding: 2rem;
-    }
-
-    .mts_heading h1 {
-        font-size: 3rem;
     }
 
     .mts_heading h3 {
@@ -520,9 +518,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 58px;
+    font-size: 56px;
 }
-.contact_container a{
+
+@media screen and (max-width:550px) {
+    .contact_container {
+        font-size: 24px;
+    }
+}
+
+.contact_container a {
     text-decoration: none;
     background-color: var(--dark-mode);
     background-image: var(--gradient-heading);
@@ -533,14 +538,15 @@ body {
     -moz-text-fill-color: transparent;
 }
 
-.footer_conatiner{
+.footer_conatiner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 8rem;
+    padding: var(--container-padding);
     border-top: solid 1px #363636;
 }
-.footer_conatiner a{
+
+.footer_conatiner a {
     text-decoration: none;
     font-size: 24px;
     background-color: var(--dark-mode);
@@ -551,11 +557,22 @@ body {
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 }
-.github{
+
+.github {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: var(--container-padding);
     gap: 24px;
-    align-items:center;
+    align-items: center;
+}
+
+.github p img {
+    max-width: 500px;
+}
+
+@media screen and (max-width:550px) {
+    .github p img {
+        max-width: 300px;
+    }
 }
