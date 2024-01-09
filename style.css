@@ -440,6 +440,7 @@ body {
 
 .project_image img {
     width: 100%;
+    border-radius: 1.2rem 1.2rem 0 0;
 }
 
 .project_about {
@@ -549,4 +550,12 @@ body {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+}
+.github{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: var(--container-padding);
+    gap: 24px;
+    align-items:center;
 }
